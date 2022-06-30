@@ -10,10 +10,55 @@ public class AEPage {
     public AEPage(){
             PageFactory.initElements(Driver.getDriver(),this);
         }
+//For Test Case 24 *****************************************************************************************************
+@FindBy(xpath = "//*[@href='/view_cart']")
+public WebElement cart;
+@FindBy(xpath = "//*[@class='active']")
+public WebElement verifyCart;
+@FindBy(xpath = "//*[@href='/product_details/1']")
+public WebElement viewProduct;
+    @FindBy(xpath = "//*[@class='btn btn-default cart']")
+    public WebElement addToCart;
+    @FindBy(xpath = "//*[text()='View Cart']")
+    public WebElement viewCart;
+    @FindBy(xpath = "//*[text()='Proceed To Checkout']")
+    public WebElement proceedToCheckout;
+    @FindBy(xpath = "//*[text()='Register / Login']")
+    public WebElement registerLogin;
+    @FindBy(xpath = "//*[@href='/payment']")
+    public WebElement placeOrder;
+    @FindBy(xpath = "//*[@name='name_on_card']")
+    public WebElement nameOnCard;
+    @FindBy(id = "submit")
+    public WebElement payAndConfirm;
+    @FindBy(xpath = "//*[text()='Congratulations! Your order has been confirmed!']")
+    public WebElement orderSuccessfully;
+    @FindBy(xpath = "//*[@href='/download_invoice/500']")
+    public WebElement downloadInvoice;
+    @FindBy(xpath = "//*[text()='Invoice.txt']")
+    public WebElement invoiceName;
+//**********************************************************************************************************************
 
-
+//Login Page
     @FindBy(xpath="//*[@href='/login']")
     public WebElement firstSignupLoginButton;
+
+    @FindBy(xpath = "//*[text()='Login to your account']")
+    public WebElement loginToYourAccountText;
+
+    @FindBy(xpath = "(//*[@type='email'])[1]")
+    public WebElement loginEmail;
+
+    @FindBy(xpath = "(//*[@type='password'])[1]")
+    public WebElement loginPassword;
+
+    @FindBy(xpath = "(//*[@type='submit'])[1]")
+    public WebElement loginButton;
+
+    @FindBy(xpath = "//*[text()=\" Logged in as \"]/b")
+    public WebElement loggedInName;
+
+//Sign Up Page
 
     @FindBy(xpath ="//*[@data-qa='signup-name']")
     public WebElement name;
@@ -81,8 +126,25 @@ public class AEPage {
     @FindBy(className = "//*[@data-qa='continue-button']")
     public WebElement continueButton;
 
+
+
+
+
+//Delete Account
     @FindBy(xpath = "//*[@href='/delete_account']")
     public WebElement deleteAccount;
+
+    @FindBy(xpath = "//*[text()=\"Delete\"]")
+    public WebElement secondDeleteButton;
+
+    @FindBy(xpath = "(//*[text()=\"Delete Account\"])[2]")
+    public WebElement DeleteAccountText;
+
+//Logout Button
+    @FindBy (xpath = "//*[(text()=' Logout')]")
+    public WebElement logoutButton;
+
+
 
 }
 
